@@ -1,0 +1,19 @@
+
+<script>
+    let teste = [];
+    let numero = 0;
+    let montante = 0;
+
+    for (let i=0; i<5; i++){
+        numero = parseInt(prompt("digite o numero: "));
+        teste.push(numero);
+    }
+
+    for (let t of teste){
+        document.write(t + "<br>");    
+        montante += t;
+    }
+
+    document.write(montante);
+    
+</script>
