@@ -1,0 +1,17 @@
+<script>
+    let nome = "";
+    let nomes = [];
+
+    for(let i=1; i<=5; i++){
+        nome = prompt("Digite o nome do aluno: ");
+        nomes.push(nome);
+    }
+
+    document.write(nomes);
+    document.write("<br>");
+
+    for(let n of nomes){
+        document.write(n + "<br>");
+    }
+
+</script>
