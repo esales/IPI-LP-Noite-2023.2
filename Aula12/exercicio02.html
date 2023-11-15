@@ -1,0 +1,24 @@
+<script>
+    let venda = 0;
+    let vendas = [];
+    let total = 0; //variável acumuladora
+    let media = 0;
+
+    //entrada de dados
+    for(let i=1; i<=6; i++){
+        venda = parseFloat( prompt("Digite o valor da venda") );
+
+        vendas.push(venda);
+        total += venda;
+    }
+
+    media = total/6;
+
+    //saída de dados
+    for(let valor of vendas){
+        document.write(valor + "<br>");
+    }
+
+    document.write("Média: " + media.toFixed(2));
+
+</script>

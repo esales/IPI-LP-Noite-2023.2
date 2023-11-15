@@ -1,0 +1,18 @@
+<script>
+    let nota = 0;
+    let notas = [];
+
+    nota = parseFloat(prompt("Digite a nota")); 
+
+    while(nota >= 0){   
+        notas.push(nota);
+
+        nota = parseFloat(prompt("Digite a nota")); 
+    }
+
+    for(let n of notas){
+        if(n >= 6){
+            document.write(n + "<br>");
+        }
+    }
+</script>
