@@ -1,0 +1,76 @@
+<script>
+
+    
+    const receitasMensais = [
+        [1000, 1200, 1500, 800, 1200, 900, 1100, 1300, 1000, 1200, 1500, 800],
+        [1100, 1300, 1600, 900, 1300, 1000, 1200, 1400, 1100, 1300, 1600, 900],
+        [1200, 1400, 1700, 1000, 1400, 1100, 1300, 1500, 1200, 1400, 1700, 1000],
+        [1300, 1500, 1800, 1100, 1500, 1200, 1400, 1600, 1300, 1500, 1800, 1100],
+        [1400, 1600, 1900, 1200, 1600, 1300, 1500, 1700, 1400, 1600, 1900, 1200],
+        [1500, 1700, 2000, 1300, 1700, 1400, 1600, 1800, 1500, 1700, 2000, 1300],
+        [1600, 1800, 2100, 1400, 1800, 1500, 1700, 1900, 1600, 1800, 2100, 1400],
+        [1700, 1900, 2200, 1500, 1900, 1600, 1800, 2000, 1700, 1900, 2200, 1500],
+        [1800, 2000, 2300, 1600, 2000, 1700, 1900, 2100, 1800, 2000, 2300, 1600],
+        [1900, 2100, 2400, 1700, 2100, 1800, 2000, 2200, 1900, 2100, 2400, 1700],
+        [2000, 2200, 2500, 1800, 2200, 1900, 2100, 2300, 2000, 2200, 2500, 1800],
+        [2100, 2300, 2600, 1900, 2300, 2000, 2200, 2400, 2100, 2300, 2600, 1900]
+    ];
+
+    let receitaAnual = 0;
+    let receitaMesTotal = 0;
+    let opcao = 0;
+    
+    // ano base para o cálculo do índice do ano
+    // a linha 0 indica 2019, a linha 1 indica 2020, etc.
+    let anoBase = 2019; 
+
+    //lê a opção
+    opcao = prompt("1-Receita anual \n" +
+                   "2-Receita de um mês ao longo dos anos \n" +
+                   "3-finalizar");
+
+    while(opcao !=3){ // 3-finalizar
+
+        // Receita anual
+        if(opcao == 1){
+            let anoEscolhido = prompt("Indique o ano");
+
+            // calcula o índice do ano de acordo com o ano base.
+            let indiceAno = anoEscolhido - anoBase;
+            
+            // zera a receita anual
+            receitaAnual = 0;
+
+            // percorre o array de receitas mensais para o ano escolhido
+            for(let i = 0; i < receitasMensais[indiceAno].length; i++){
+                receitaAnual += receitasMensais[indiceAno][i];
+            }
+
+            console.log(`A receita anual de ${anoEscolhido} foi de ${receitaAnual}`);
+            
+        } else if(opcao == 2){
+            let mesEscolhido = prompt("Indique o mês");
+
+            // calcula o índice do mês
+            let indiceMes = mesEscolhido - 1;
+
+            // zera a receita mensal
+            receitaMesTotal = 0;
+
+            // percorre a matriz de receitas mensais 
+            for(let i = 0; i < receitasMensais.length; i++){
+
+                // observe que o índice do mês é o mesmo para todos os anos
+                receitaMesTotal += receitasMensais[i][indiceMes];
+            }
+
+            console.log(`A receita total do mês ${mesEscolhido} ao longo dos anos foi de ${receitaMesTotal}`);
+
+        } else { // opcao inválida
+            alert("opção inválida");
+        }
+
+        // atualiza a opção
+        opcao = prompt("1-Receita anual \n 2-Receita de um mês ao longo dos anos \n 3-finalizar");
+    }
+</script>

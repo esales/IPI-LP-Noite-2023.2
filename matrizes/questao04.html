@@ -1,0 +1,20 @@
+<script>
+    const matriz = [[10, 2, 3, 4], [5, 6, 7, 8], [9, 10, 0, 12]];
+    
+    // valor inicial de menor é o maior valor possível
+    let menor = Infinity;
+
+    // percorre a matriz
+    for (let i = 0; i < matriz.length; i++) {
+        for (let j = 0; j < matriz[i].length; j++) {
+
+            // se o elemento da matriz for menor que o valor armazenado na variável, atualiza a variável.
+            // ao final do laço, o valor armazendo na variável será o menor valor da matriz.
+            if (matriz[i][j] < menor) {
+                menor = matriz[i][j];
+            }
+        }
+    }
+
+    document.write(`Menor valor: ${menor}`);
+</script>

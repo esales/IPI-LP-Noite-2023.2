@@ -1,0 +1,17 @@
+<script>
+    const matriz = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]];
+    let matrizTranposta = [];
+
+    for (let i = 0; i < matriz[0].length; i++) {
+        for (let j = 0; j < matriz.length; j++) {
+
+            // inverte as variáveis de controle i e j.
+            // o elemento que estava na linha i e coluna j passa a estar na linha j e coluna i.
+            // observe que a matriz transposta tem o número de linhas igual ao número de colunas da matriz original
+            document.write(matriz[j][i] + " ");
+        }
+
+        document.write("<br>"); // quebra a linha
+    }
+
+</script>
