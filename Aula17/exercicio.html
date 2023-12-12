@@ -1,0 +1,46 @@
+<script>
+    function adicao(a, b){
+        return a + b;
+    }
+
+    function subtracao(a, b){
+        return a - b;
+    }
+
+    function multiplicacao(a, b){
+        return a * b;
+    }
+
+    function divisao(a, b){
+        return a / b;
+    }
+    
+    let valor1 = 0;
+    let valor2 = 0;
+    let operacao = '';
+
+    valor1 = parseFloat(prompt('Digite o primeiro valor: '));
+    valor2 = parseFloat(prompt('Digite o segundo valor: '));
+    operacao = prompt('a - adição \n' +
+                      's - subtração \n' +
+                      'm - multiplicação \n'+
+                      'd - divisão. \n' +
+                      'Qual operação deseja realizar? ');
+    
+    switch(operacao){
+        case 'a':
+            document.write('A soma dos valores é: ' + adicao(valor1, valor2));
+            break;
+        case 's':
+            document.write('A subtração dos valores é: ' + subtracao(valor1, valor2));
+            break;
+        case 'm':
+            document.write('A multiplicação dos valores é: ' + multiplicacao(valor1, valor2));
+            break;
+        case 'd':
+            document.write('A divisão dos valores é: ' + divisao(valor1, valor2));
+            break;
+        default:
+            document.write('Operação inválida!');
+    }
+</script>

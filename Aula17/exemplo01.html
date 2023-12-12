@@ -1,0 +1,60 @@
+<script>
+    
+    //função simples sem parâmetro
+    function primeiraFuncao(){
+
+        document.write("Essa é a primeira função!!");
+        document.write("<br>");
+    
+    }
+
+    //função simples com parâmetro
+    function imprimirNaTela(texto){
+
+        document.write("<br>");
+        document.write(texto);
+        document.write("<br>");
+
+    }
+
+    //função soma sem retorno
+    function soma(valor1, valor2){
+
+        document.write( valor1 + valor2);
+
+    }
+
+    //função soma com retorno
+    function soma2(valor1, valor2){
+        
+        return valor1 + valor2;
+
+    }
+
+    //valor padrão
+    function soma3(a, b = 1){
+        document.write("<br>");
+
+        document.write(a + b);
+    }
+
+
+    //chamadas de funções...
+
+    primeiraFuncao();
+
+    soma(10, 20);
+
+    let total = soma2(4, 50);
+
+    imprimirNaTela(total);
+
+    imprimirNaTela( soma2(4, 50) );
+
+    // console.log(outraVariavel);
+
+    soma3(2);
+
+    soma3(2, 5);
+ 
+</script>
