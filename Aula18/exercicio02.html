@@ -1,0 +1,17 @@
+<script>
+    function calcularComissao(valor, percentual){
+        let retorno = valor * percentual / 100;
+        return retorno;
+    }
+
+    let valorVenda = 0;
+    let percentualComissao = 0;
+    let valorComissao = 0;
+
+    valorVenda = Number(prompt("Digite o valor da venda: "));
+    percentualComissao = Number(prompt("Digite o percentual de comissão: "));
+
+    valorComissao = calcularComissao(valorVenda, percentualComissao);
+
+    document.write(`O valor da comissão é R$ ${valorComissao}`);
+</script>
