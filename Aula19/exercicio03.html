@@ -1,0 +1,64 @@
+<script>
+    let arrayNotas =[];
+    let opcao = 0;
+
+    function validarNumero(numero){
+        let retorno = false;
+
+        if(numero >=0 && numero <= 10)
+            retorno = true;
+        
+        return retorno;
+    };
+
+    function calcularMedia(array){
+        let montante = 0;
+        let quantidade = 0;
+        let media = 0;
+
+        for (let elemento of array){
+            montante += elemento;
+            quantidade++;
+        }
+
+        media = montante / quantidade;
+
+        return media;
+    }
+
+    function exibirMenu(){
+        let texto = "Digite 1 para adicionar nota e 2 para sair";
+
+        opcao = Number(prompt(texto));
+
+        while(opcao != 1 && opcao != 2){
+            alert("Opcão inválida");
+            opcao = Number(prompt(texto));
+        }
+
+        return opcao;
+    }
+
+    opcao = exibirMenu();
+
+    while (opcao == 1){
+        let nota = Number(prompt("Digite uma nota"));
+
+        while(!validarNumero(nota)){
+            alert("Nota inválida");
+            nota = Number(prompt("Digite uma nota"));
+        }
+
+        arrayNotas.push(nota);
+
+        opcao = exibirMenu();
+    }
+
+    let media = calcularMedia(arrayNotas);
+
+    if (!isNaN(media))
+        document.write(`A média das notas é ${media}`);
+    else
+        document.write("Nenhuma nota foi adicionada");
+
+</script>

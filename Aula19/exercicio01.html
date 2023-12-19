@@ -1,0 +1,19 @@
+<script>
+    
+    function calcularDiasVividos(dias, meses, anos){
+        let totalDias = 0;
+
+        totalDias += dias;
+        totalDias += meses * 30;
+        totalDias += anos * 365;
+
+        return totalDias;
+
+        // resolução alternativa
+        // return dias + meses*30 + anos*365;
+    }
+
+    document.write( calcularDiasVividos(15, 10, 10) );
+    document.write("<br>");
+    document.write( calcularDiasVividos(12, 2, 25) );
+</script>

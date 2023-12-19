@@ -1,0 +1,29 @@
+<script>
+
+    function retornarMulta(velocidadeMaxima, velocidadeVeiculo){
+        let texto = "";
+
+        if (velocidadeVeiculo <= velocidadeMaxima){
+            texto = "Não foi multado.";
+        } else if (velocidadeVeiculo <= velocidadeMaxima * 1.1){
+            texto = "Isento de multa mas com advertência.";
+        } else if (velocidadeVeiculo <= velocidadeMaxima * 1.2){
+            texto = "Infração média, 4 pontos, R$ 130,16.";
+        } else if (velocidadeVeiculo <= velocidadeMaxima *1.5){
+            texto = "Infração grave, 5 pontos, R$ 195,23."
+        } else {
+            texto = "Infração gravíssima, 7 pontos, 293,47.";
+        }
+
+        return texto;
+    }
+    document.write( retornarMulta(100, 99) );
+    document.write("<br>");
+    document.write( retornarMulta(100, 110) );
+    document.write("<br>");
+    document.write( retornarMulta(100, 120) );
+    document.write("<br>");
+    document.write( retornarMulta(100, 150) );
+    document.write("<br>");
+    document.write( retornarMulta(100, 151) );
+</script>
